@@ -14,9 +14,9 @@ copyright: Solutions by Chazona 2017
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,700,500,600" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/styles-06cf0fcf58.css"/>
+    <link rel="stylesheet" href="assets/css/styles-bc57473f5f.css"/>
 
-    <script src="assets/js/vendor-3cac248275.js"></script>
+    <script src="assets/js/vendor-136be8a390.js"></script>
   </head>
   <body id="top">
     <header class="header">
@@ -24,7 +24,7 @@ copyright: Solutions by Chazona 2017
         <div class="header__title-bar">
           <h1 class="header__title-bar__title">Halsey Studios & Salon</h1>
           <div class="header__title-bar__button-holder">
-            <button class="button button--accent-color">Book Online</button>
+            <button class="button button--accent-color open-modal">Book Online</button>
             <button class="button">
               <svg>
                 <use xlink:href="./assets/images/sprites/fa-solid.svg#map-marker-alt"></use>
@@ -168,7 +168,41 @@ copyright: Solutions by Chazona 2017
       </div>
     </footer>
 
-    <script src="assets/js/app-b9ccc33981.js"></script>
+    <div class="modal">
+      <div class="container container--t-padding">
+        <div class="modal__form">
+          <h2 class="section-title">Book Online</h2>
+          <form class="form">
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="form__group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form__group">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="form__group">
+              <label for="requests">Requests</label>
+              <textarea id="requests" name="requests"></textarea>
+            </div>
+            <div class="form-group">
+              <button class="button button--accent-color">Book Now</button>
+            </div>
+          </form>
+          <div class="modal__form__close">&times;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/app-c1b7a205d1.js"></script>
     
   </body>
 </html>
