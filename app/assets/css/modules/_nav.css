@@ -37,7 +37,7 @@
     font-size: .9rem;
 
     & ul li a {
-      
+
       &:hover {
         color: $accentColor;
       }
@@ -50,22 +50,35 @@
     }
 
     & ul li a {
+      position: relative;
+      transition: color .3s ease;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: .5rem solid $accentColor;
+        border-left: .5rem solid transparent;
+        border-right: .5rem solid transparent;
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        margin-left: -.25rem;
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: top;
+        transition-property: opacity, transform;
+        transition-duration: .3s, .3s;
+        transition-timing-function: ease, ease;
+      }
+
       &.active {
         color: $accentColor;
-        position: relative;
 
         &::after {
-          content: '';
-          display: block;
-          width: 0;
-          height: 0;
-          border-top: .5rem solid $accentColor;
-          border-left: .5rem solid transparent;
-          border-right: .5rem solid transparent;
-          position: absolute;
-          bottom: -1rem;
-          left: 50%;
-          margin-left: -.25rem;
+          opacity: 1;
+          transform: scale(1);
         }
       }
     }

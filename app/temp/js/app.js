@@ -10338,10 +10338,15 @@ var _Modal = __webpack_require__(4);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
+var _Tabs = __webpack_require__(5);
+
+var _Tabs2 = _interopRequireDefault(_Tabs);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var halseySmoothScroll = new _HalseySmoothScroll2.default();
 var modal = new _Modal2.default();
+var tabs = new _Tabs2.default();
 
 /***/ }),
 /* 2 */
@@ -10820,6 +10825,55 @@ var Modal = function () {
 }();
 
 exports.default = Modal;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Tabs = function () {
+  function Tabs() {
+    _classCallCheck(this, Tabs);
+
+    this.tabs = (0, _jquery2.default)('.tab');
+    this.events();
+  }
+
+  _createClass(Tabs, [{
+    key: 'events',
+    value: function events() {
+      this.tabs.click(this.switchTab.bind(this));
+    }
+  }, {
+    key: 'switchTab',
+    value: function switchTab(event) {
+      event.preventDefault();
+      var activeTab = (0, _jquery2.default)('.tab.active');
+      activeTab.removeClass('active');
+      event.target.classList.add('active');
+    }
+  }]);
+
+  return Tabs;
+}();
+
+exports.default = Tabs;
 
 /***/ })
 /******/ ]);
