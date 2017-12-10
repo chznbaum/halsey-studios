@@ -9,7 +9,7 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  
+
   @mixin atLarge {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -17,6 +17,14 @@
 
   &--narrow {
     max-width: 29.375rem;
+  }
+
+  &--t-padding {
+    padding-top: 1rem;
+
+    @mixin atMedium {
+      padding-top: 2rem;
+    }
   }
 
   &--tb-padding {
