@@ -35,6 +35,7 @@
     background-image: linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 60%, #CCCCCC 100%);
     color: $fontDarkPrimary;
     font-size: .9rem;
+    transition: display .3s ease;
 
     & ul li a {
     transition: color .3s ease;
@@ -42,6 +43,10 @@
       &:hover {
         color: $accentColor;
       }
+    }
+
+    .header--transparent & {
+      display: none;
     }
   }
 

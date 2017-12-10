@@ -1,8 +1,22 @@
 .header {
-
   background-color: #000000;
   color: #ffffff;
   padding-top: 2rem;
+  transition: all .3s ease;
+  transform-origin: top;
+
+  @mixin atMedium {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    &--transparent {
+      display: fixed;
+      background-color: rgba(0,0,0,0.3);
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
+  }
 
   &__title-bar {
 
