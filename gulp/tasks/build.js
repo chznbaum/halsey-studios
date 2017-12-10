@@ -37,7 +37,9 @@ gulp.task('optimizeImages', ['deleteDocsFolder'], function() {
   return gulp.src([
     './app/assets/images/**/*',
     '!./app/assets/images/icons/',
-    '!./app/assets/images/icons/**/*'
+    '!./app/assets/images/icons/**/*',
+    '!./app/assets/images/sprites/',
+    '!./app/assets/images/sprites/**/*'
   ])
     .pipe(imagemin({
       progressive: true,
@@ -45,6 +47,10 @@ gulp.task('optimizeImages', ['deleteDocsFolder'], function() {
       multipass: true
     }))
     .pipe(gulp.dest('./docs/assets/images'));
+});
+
+gulp.task('copySprites', ['deleteDocsFolder'], function() {
+  return gulp.src('./app/assets/images/sprites/**').pipe(gulp.dest('./docs/assets/images/sprites/'));
 });
 
 gulp.task('useminTrigger', ['deleteDocsFolder'], function() {
@@ -60,4 +66,4 @@ gulp.task('usemin', ['styles', 'scripts'], function() {
     .pipe(gulp.dest('./docs/'));
 });
 
-gulp.task('build', ['deleteDocsFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger']);
+gulp.task('build', ['deleteDocsFolder', 'copyGeneralFiles', 'optimizeImages', 'copySprites', 'useminTrigger']);
