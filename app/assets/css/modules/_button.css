@@ -7,9 +7,10 @@
   cursor: pointer;
   text-transform: uppercase;
   background-color: #EEEEEE;
+  transition: background-color .3s ease;
   
   &:hover {
-    background-color: #DDDDDD;
+    background-color: #CCCCCC;
   }
 
   &--accent-color {
