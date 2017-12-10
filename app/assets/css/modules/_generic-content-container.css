@@ -1,0 +1,36 @@
+.generic-content-container {
+
+  p {
+    line-height: 1.65;
+    margin: 0 0 1.8rem 0;
+    font-weight: 300;
+  }
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &--light {
+    p {
+      color: rgba(255,255,255,.7);
+    }
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &--small {
+    p {
+      font-size: .85rem;
+      letter-spacing: .05rem;
+    }
+  }
+
+  &--solid {
+    p {
+      font-weight: 400;
+    }
+  }
+}

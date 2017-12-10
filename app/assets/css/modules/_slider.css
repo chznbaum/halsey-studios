@@ -1,0 +1,42 @@
+.slider {
+
+  width: 100%;
+
+  &__holder {
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+    margin: 0;
+
+    &__slide {
+      position: relative;
+
+      & .container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-top: 10rem;
+
+        @mixin atMedium {
+          max-width: 50vw;
+          top: 10rem;
+          left: 5rem;
+          right: unset;
+          bottom: unset;
+          padding-top: 7rem;
+        }
+
+        @mixin atLarge {
+          max-width: 40vw;
+          top: 12.5rem;
+          left: 5rem;
+          right: unset;
+          bottom: unset;
+          padding-top: 7rem;
+        }
+      }
+    }
+  }
+}

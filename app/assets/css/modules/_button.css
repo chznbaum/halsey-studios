@@ -1,0 +1,67 @@
+.button {
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #EEEEEE;
+  
+  &:hover {
+    background-color: #DDDDDD;
+  }
+
+  &--accent-color {
+    background-color: $accentColor;
+    color: #ffffff;
+
+    &:hover {
+      background-color: $accentDark;
+    }
+  }
+
+  &--to-top {
+    position: relative;
+    bottom: 1.5rem;
+    width: 3.5rem;
+    z-index: 1;
+    text-align: center;
+    fill: #ffffff;
+    left: 50%;
+    margin-left: -1.75rem;
+
+    &::before {
+      content: '';
+      background-color: rgba($accentColor, .4);
+      transform: rotate(15deg);
+      transform-origin: top;
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 25%;
+      z-index: -1;
+    }
+
+    &::after {
+      content: '';
+      background-color: rgba($accentColor, .4);
+      transform: rotate(-15deg);
+      transform-origin: top;
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 25%;
+      z-index: -1;
+    }
+  }
+
+  & svg {
+    width: .9rem;
+    height: .9rem;
+  }
+}

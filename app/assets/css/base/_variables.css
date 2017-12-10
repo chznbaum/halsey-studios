@@ -1,0 +1,17 @@
+/* Color Palette */
+
+$primaryColor: #000000;
+$accentColor: #F00A77;
+$accentDark: #D60A69;
+
+/* Text */
+
+$fontFamily: 'Raleway', Arial, sans-serif;
+$fontDarkPrimary: rgba(0,0,0,.875);
+$fontDarkSecondary: rgba(0,0,0,.54);
+$fontDarkHint: rgba(0,0,0,.38);
+$fontDarkDividers: rgba(0,0,0,.12);
+$fontLightPrimary: rgba(255,255,255,1);
+$fontLightSecondary: rgba(255,255,255,.7);
+$fontLightHint: rgba(255,255,255,.5);
+$fontLightDividers: rgba(255,255,255,.12);

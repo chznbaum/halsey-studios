@@ -1,0 +1,45 @@
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 77.25rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @mixin atMedium {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  @mixin atLarge {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  &--narrow {
+    max-width: 29.375rem;
+  }
+
+  &--tb-padding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @mixin atMedium {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  }
+
+  &--dark {
+    background-color: rgba(0,0,0,0.6);
+    color: #ffffff;
+
+    @mixin atMedium {
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
+
+  &--black {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}

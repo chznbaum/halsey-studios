@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $fontFamily;
+  color: $fontDarkPrimary;
+}
+
+a {
+  color: $accentColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $accentDark;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,14 @@
+.section-title {
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &--centered {
+    text-align: center;
+    display: block;
+  }
+
+  strong {
+    font-weight: 400;
+    color: $accentColor;
+  }
+}

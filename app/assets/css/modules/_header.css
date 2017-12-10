@@ -1,0 +1,34 @@
+.header {
+
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 2rem;
+
+  &__title-bar {
+
+    &__title {
+      text-align: center;
+    }
+
+    &__button-holder {
+      text-align: center;
+    }
+
+    @mixin atMedium {
+      @mixin clearfix;
+
+      &__title {
+        margin: 0;
+        float: left;
+      }
+
+      &__button-holder {
+        float: right;
+      }
+    }
+  }
+
+  & .icon {
+    display: block;
+  }
+}
